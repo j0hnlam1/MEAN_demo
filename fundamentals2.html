@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// 1
+		// var get_sum=function(x,y){
+		function get_sum(x,y){
+			var sum1=0;
+			for(var i=x; i<=y; i++){
+				sum1+=i;
+			}
+			return sum1
+		}
+		console.log(get_sum(2,10));
+
+		// 2
+		// var get_min= function(x){
+		function get_min(x){
+			var min=x[0];
+			for(var i=0; i<x.length; i++){
+				if(min>x[i]){
+					min=x[i];
+				}
+			}
+			return min;
+		}
+		var arr=[1,2,3,4,5];
+		console.log(get_min(arr));
+
+		// 3
+		// var get_avg= function (z){
+		function get_avg(z){
+			var avg=0;
+			var sum=0;
+			for(var i=0; i<z.length; i++){
+				sum+=z[i];
+			}
+			avg=sum/z.length;
+			return avg;
+		} 
+		var arr=[2,1,4,5,2];
+		console.log(get_avg(arr));
+
+		// 4
+		var person={
+			name: 'john',
+			distance_traveled: 0,
+			say_name: alert('person.name'),
+			say_something: function(a){
+				console.log('john says '+ a );
+			},
+			walk: function(){
+				alert('john is walking');
+				person.distance_traveled+=3;
+				return person;
+				// return person.distance_traveled;
+				// console.log(person.distance_traveled);
+			},
+			run: function(){
+				alert('john is running');
+				person.distance_traveled+=10;
+				return this;
+				// console.log(person.distance_traveled);
+			},
+			crawl: function(){
+				alert('john is crawling');
+				person.distance_traveled+=1;
+				return this;
+				// console.log(person.distance_traveled);
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

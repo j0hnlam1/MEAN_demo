@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	// Example problem 1
+		console.log(hello);
+		var hello = "interesting";
+		function example() {
+		  var hello = "hi!"
+		  console.log(hello)
+		}
+		example();
+		console.log(hello)
+
+	// Example problem 2
+		// rearranged code with output predictions
+		var hello;                 // var hello declaration floats to the top
+		// function declaration/assignment floats to the top under variable declarations
+		// you'll read about this more in the following sections
+		function example() {       // function is like a cage
+		  var hello;               // variable declaration floats to the top of the cage
+		  hello = "hi";            // notice that we split up the declaration and assignment
+		  console.log(hello)       // this will print "hi"
+		}
+		console.log(hello);        // this will print undefined
+		hello = "interesting";     // assignment stays where it is
+		example();                 // this actually runs the function
+		console.log(hello);        // this prints "interesting" because it refers to the global var 'hello'
+
+	// Problem 1
+		var first_variable;
+		function firstFunc() {
+			first_variable = "Not anymore!!!";
+			console.log(first_variable)				//Not anymore!!!!
+		}
+		console.log(first_variable);				//undef
+		first_variable = "Yipee I was first!";
+		console.log(first_variable);				//Yipee I was first!
+		                           
+
+	// Problem 2
+		var food;
+		function eat() {
+			var food;
+			food = "half-chicken";
+			console.log(food);						//half-chicken
+			food = "gone";       // NOTE: I'M TRYING TO TRICK YOU HERE!!!!
+		}
+		food = "Chicken";
+		eat();
+		console.log(food);							//Chicken
+		                           
+
+	// Problem 3
+		var new_word;
+		function lastFunc() {
+			new_word = "old";
+		}
+		new_word = "NEW!";
+		console.log(new_word);						//NEW!
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
